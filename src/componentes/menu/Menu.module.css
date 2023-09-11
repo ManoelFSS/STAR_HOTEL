@@ -5,17 +5,17 @@
     display: flex;
     flex-direction: column;
     align-items:center;
-    background-color:rgba(0, 0, 0, 0.698);
+    background-color:rgba(0, 0, 0, 0.424);
     overflow: hidden;
-    transition: all 0.3s;
+    transition: all 0.2s;
     position: relative;
-    box-shadow: 4px 5px 15px  #000000a1;
+    box-shadow: 4px 5px 15px  #000;
 }
 
 .nave_Ber div{
     height: 120px;
     width: 120px;
-    margin-top: 20px;
+    margin-top: 10px;
     border-radius:50%;
 }
 .nave_Ber div h4 {
@@ -51,7 +51,6 @@
     border-radius:50%;
     border: solid 2px  rgb(141, 141, 141);
     cursor: pointer;
-    transition: all 0.3s;
     position: relative;
 }
 .nave_Ber img:hover {
@@ -61,13 +60,13 @@
 .nave_Ber ul {
     list-style: none;
     width: 100%;
-    margin-top: 40px;
+    margin-top: 170px;
+    position: absolute;
 }
 
 .nave_Ber ul li{
-    margin-top: 10px;
     width: 200px;
-    padding-left: 10px;
+    padding: 2px 10px;
 }
 
 .link {

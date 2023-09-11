@@ -24,6 +24,7 @@ export const Menu = () => {
 
     return (
         <nav className={styles.nave_Ber} style={{width: toggle ? "60px" : "200px"}}>
+            
             <div  style={{display:!toggle ? "block" : "none"}}>
                 <img src={Logo} alt="Logo tipo" />
                 <h4>Manoel</h4>
