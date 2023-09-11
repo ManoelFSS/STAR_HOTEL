@@ -1,5 +1,5 @@
 import React from 'react';
-import { LuMenuSquare } from 'react-icons/lu';
+import { BsBoxArrowRight } from 'react-icons/bs';
 import { TbLogout2 } from 'react-icons/tb';
 import {VscChromeClose} from 'react-icons/vsc';
 import styles from "./Header.module.css"
@@ -13,9 +13,9 @@ export const Header = ()=>{
         <header>
             <div   onClick={toggleMenu} >
                 { toggle === false ? (
-                        <LuMenuSquare className={styles.icone_menu}/>
+                        <VscChromeClose className={styles.icone_menu}/>   
                     ) : (
-                        <VscChromeClose className={styles.icone_menu}/>
+                        <BsBoxArrowRight className={styles.icone_menu}/>
                     )
                 }
             </div>

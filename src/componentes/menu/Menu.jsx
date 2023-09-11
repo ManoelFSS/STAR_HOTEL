@@ -27,7 +27,10 @@ export const Menu = () => {
 
     return (
         <nav className={styles.nave_Ber} style={menuStyle}>
-            <img src={Logo} alt="Logo tipo" />
+            <div style={{display:!toggle ? "block" : "none"}}>
+                <img src={Logo} alt="Logo tipo" />
+                <h4>Manoel</h4>
+            </div>
             <ul>
                 <li>
                     <Link
