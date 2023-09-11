@@ -17,17 +17,14 @@ import { useAppContext } from "../../AppContext";
 
 export const Menu = () => {
 
-    const { toggle,levelRestrito } = useAppContext();
+    const { toggle, levelRestrito } = useAppContext();
     const [classAtiva, setClassAtiva] = useState("Home")
     const [classLink, setClassLink] = useState("Home")
-    
-    const menuStyle = {
-        width: toggle ? "60px" : "200px"
-    };
+
 
     return (
-        <nav className={styles.nave_Ber} style={menuStyle}>
-            <div style={{display:!toggle ? "block" : "none"}}>
+        <nav className={styles.nave_Ber} style={{width: toggle ? "60px" : "200px"}}>
+            <div  style={{display:!toggle ? "block" : "none"}}>
                 <img src={Logo} alt="Logo tipo" />
                 <h4>Manoel</h4>
             </div>
