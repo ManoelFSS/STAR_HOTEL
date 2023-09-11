@@ -9,16 +9,16 @@
     overflow: hidden;
     transition: all 0.2s;
     position: relative;
-    box-shadow: 4px 5px 15px  #000;
+    box-shadow: 4px 4px 15px  #000;
 }
 
-.nave_Ber div{
+.nave_Ber label{
     height: 120px;
     width: 120px;
     margin-top: 10px;
     border-radius:50%;
 }
-.nave_Ber div h4 {
+.nave_Ber label h4 {
     color: #fff;
     display: flex;
     width: 100%;
@@ -26,7 +26,7 @@
     padding: 5px;
 }
 
-.nave_Ber div::after {
+.nave_Ber label::after {
     content: "Editar Foto";
     display: none;
     width: 50px;
@@ -40,7 +40,7 @@
     border-radius:10px 10px 10px 0px;
 }
 
-.nave_Ber div:hover::after{
+.nave_Ber label:hover::after{
     display: block;
 }
 

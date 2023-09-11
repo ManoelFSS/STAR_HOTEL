@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+
 import styles from "./Menu.module.css"
 import { Link } from "react-router-dom"
 import { IoHome } from 'react-icons/io5';
@@ -12,6 +13,7 @@ import { FaMoneyBillTrendUp } from 'react-icons/fa6';
 import { GiReceiveMoney } from 'react-icons/gi';
 import { RiHotelFill } from 'react-icons/ri';
 import { IoSettingsSharp } from 'react-icons/io5';
+
 import Logo from "../../assets/images/hotel01.jpg"
 import { useAppContext } from "../../AppContext";
 
@@ -20,15 +22,53 @@ export const Menu = () => {
     const { toggle, levelRestrito } = useAppContext();
     const [classAtiva, setClassAtiva] = useState("Home")
     const [classLink, setClassLink] = useState("Home")
+    const [foto, setFoto] = useState()
 
+
+    useEffect(()=>{
+        const dataFoto = localStorage.getItem("foto");
+        if(dataFoto === null){
+           localStorage.setItem("foto", Logo)
+        }
+        update()
+    },[])
+
+
+    const update = () =>{
+        const getFoto = localStorage.getItem("foto");
+        setFoto(getFoto )
+    } 
+
+    const hendeleUpdateFoto = (e)=>{
+
+        const inputTarget = e.target
+        console.log(inputTarget)
+        const file = inputTarget.files[0]
+        // Verifique se um arquivo foi selecionado
+        if (file) {
+            console.log(file)
+            // Crie uma URL temporária para a imagem selecionada
+            const imageUrl = URL.createObjectURL(file);
+            console.log(imageUrl)
+            localStorage.setItem("foto", imageUrl)
+            update()
+        }
+    }
 
     return (
         <nav className={styles.nave_Ber} style={{width: toggle ? "60px" : "200px"}}>
             
-            <div  style={{display:!toggle ? "block" : "none"}}>
-                <img src={Logo} alt="Logo tipo" />
+            <label for="updateFoto" style={{display:!toggle ? "block" : "none"}}>
+                <img src={foto} alt="Logo tipo" />
                 <h4>Manoel</h4>
-            </div>
+            </label>
+            <input 
+                id="updateFoto" 
+                type="file" 
+                accept="image/*" 
+                style={{display: "none"}} 
+                onChange={(e)=> hendeleUpdateFoto(e)}
+            />
             <ul>
                 <li>
                     <Link
@@ -115,40 +155,59 @@ export const Menu = () => {
                     </Link>
                 </li>
                 <li>
-                    <Link 
-                     onClick={() => {setClassLink("Financeiro"); setClassAtiva("Financeiro")}}
-                     className={classLink === "Financeiro" ? styles.link_Ativo : styles.link} 
-                    to={"/Financeiro"}>
-                        <FaMoneyBillTrendUp 
-                             onClick={() => setClassAtiva("Financeiro")}
-                             className={classAtiva === "Financeiro" ? styles.icone_Ativo : styles.icone}
-                        />
-                        Financeiro
-                    </Link>
+                    {
+                        levelRestrito === false ? (
+                            <Link 
+                            onClick={() => {setClassLink("Financeiro"); setClassAtiva("Financeiro")}}
+                            className={classLink === "Financeiro" ? styles.link_Ativo : styles.link} 
+                            to={"/Financeiro"}>
+                                <FaMoneyBillTrendUp 
+                                    onClick={() => setClassAtiva("Financeiro")}
+                                    className={classAtiva === "Financeiro" ? styles.icone_Ativo : styles.icone}
+                                />
+                                Financeiro
+                            </Link>
+                        ) : (
+                            <></>
+                        )
+                    }
                 </li>
                 <li>
-                    <Link 
-                     onClick={() => {setClassLink("Pagamentos"); setClassAtiva("Pagamentos")}}
-                     className={classLink === "Pagamentos" ? styles.link_Ativo : styles.link} 
-                    to={"/Pagamentos"}>
-                        <GiReceiveMoney 
-                            onClick={() => setClassAtiva("Pagamentos")}
-                            className={classAtiva === "Pagamentos" ? styles.icone_Ativo : styles.icone}
-                        />
-                        Pagamentos
-                    </Link>
+                    {
+                        levelRestrito === false ? (
+                            <Link 
+                            onClick={() => {setClassLink("Pagamentos"); setClassAtiva("Pagamentos")}}
+                            className={classLink === "Pagamentos" ? styles.link_Ativo : styles.link} 
+                            to={"/Pagamentos"}>
+                               <GiReceiveMoney 
+                                    onClick={() => setClassAtiva("Pagamentos")}
+                                    className={classAtiva === "Pagamentos" ? styles.icone_Ativo : styles.icone}
+                                />
+                                Pagamentos
+                            </Link>
+                        ) : (
+                            <></>
+                        )
+                    }
                 </li>
                 <li>
-                    <Link 
-                     onClick={() => {setClassLink("Posada/Hotel"); setClassAtiva("Posada/Hotel")}}
-                     className={classLink === "Posada/Hotel" ? styles.link_Ativo : styles.link} 
-                    to={"/Posada/Hotel"}>
-                        <RiHotelFill 
-                           onClick={() => setClassAtiva("Posada/Hotel")}
-                           className={classAtiva === "Posada/Hotel" ? styles.icone_Ativo : styles.icone}
-                        />
-                        Posada/Hotel
-                    </Link>
+                    {
+                         levelRestrito === false ? (
+                            <Link 
+                            onClick={() => {setClassLink("Posada/Hotel"); setClassAtiva("Posada/Hotel")}}
+                            className={classLink === "Posada/Hotel" ? styles.link_Ativo : styles.link} 
+                            to={"/Posada/Hotel"}>
+                                <RiHotelFill 
+                                    onClick={() => setClassAtiva("Posada/Hotel")}
+                                    className={classAtiva === "Posada/Hotel" ? styles.icone_Ativo : styles.icone}
+                                />
+                                Posada/Hotel
+                            </Link>
+                         ) : (
+                            <></>
+                         )
+
+                    }
                 </li>
                 <li>
                     { 
