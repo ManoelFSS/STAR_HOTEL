@@ -1,6 +1,6 @@
 
 .nave_Ber {
-    width: 200px;
+    width: 220px;
     height: calc(100vh - 55px);
     display: flex;
     flex-direction: column;
@@ -10,6 +10,7 @@
     transition: all 0.2s;
     position: relative;
     box-shadow: 4px 10px 10px  #000;
+    
 }
 
 .nave_Ber label{
@@ -66,8 +67,10 @@
 }
 
 .nave_Ber ul li{
-    width: 200px;
+    width: 220px;
     padding: 2px 10px;
+    margin-top: 5px;
+    font-size: 15px;
     
 }
 
@@ -78,7 +81,7 @@
     color: var( --cor--sinza--text--icone--);
     text-decoration: none;
     transition: all 0.3s;
-    font-weight: bolder;
+    font-weight: 400;
 }
 .link_Ativo {
     display: flex;
@@ -86,23 +89,26 @@
     gap: 20px;
     text-decoration: none;
     transition: all 0.3s;
-    font-weight: bolder;
+    font-weight: 800;
 }
 
 .icone {
     font-size: 35px;
     padding: 6px;
     border-radius: 8px;
-    background-color: rgb(20, 20, 20);
+    background-color: var(--cor--black_backgrou--icone--);
 }
 
 .nave_Ber ul li:hover .link, .link_Ativo {
-    font-weight: bolder;
+    font-weight: 800;
     color: var( --cor--white_hover--);
+    text-shadow: 1px 2px 6px var(--cor--black_hover--);
 }
 
 .nave_Ber ul li:hover .icone, .icone_Ativo {
-    background-color: rgb(0, 0, 0);
+    background-color: var(--cor--black_backgrou--icone--);
+    border:solid 2px var( --cor--white_hover--);
+    box-shadow: 1px 3px 6px 1px var( --cor--black_hover--);
 }
 
 .icone_Ativo {

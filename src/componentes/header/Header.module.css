@@ -4,7 +4,7 @@ header {
     align-items: center;
     justify-content: space-between;
     padding: 5px 15px 0px;
-    border-bottom: solid 3px var( --cor--border--);
+    border-bottom: solid 6px var( --cor--border--);
     box-shadow: 0px 5px 20px var(--cor--black_shadow--);
     position: relative;
     z-index: 4;

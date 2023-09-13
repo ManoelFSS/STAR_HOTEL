@@ -5,9 +5,9 @@
   --cor--black_hover--:rgb(0, 0, 0);
   --cor--black_shadow--:rgb(0, 0, 0);
   --cor--yellow_hover--:#ec972f;
-  --cor--fundo--:rgb(54, 54, 54);
+  --cor--fundo--:rgb(33, 32, 32);
   --cor--border--:rgb(141, 141, 141);
-  --cor--fundo--naveBar--:rgb(21, 21, 21);
+  --cor--fundo--naveBar--:rgb(61, 61, 61);
   --cor--after--:rgba(0, 0, 0, 0.5);
 
 }
@@ -20,7 +20,7 @@
   --cor--black_shadow--:rgb(0, 0, 0);
   --cor--yellow_hover--:#f0ae5d;
   --cor--fundo--:rgb(165, 194, 211);
-  --cor--border--:rgb(0, 0, 0);
+  --cor--border--:rgb(0, 87, 116);
   --cor--fundo--naveBar--:rgb(80, 111, 131);
 }
 
@@ -32,6 +32,7 @@
   user-select: none;
   outline: none;
   font-family:sans-serif;
+  font-family:"Montserrat";
 }
 
 body {

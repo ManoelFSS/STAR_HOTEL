@@ -22,7 +22,7 @@ export const Menu = () => {
     const [classLink, setClassLink] = useState("Home")
    
     return (
-        <nav className={styles.nave_Ber} style={{width: toggle ? "60px" : "200px"}}>
+        <nav className={styles.nave_Ber} style={{width: toggle ? "60px" : "220px"}}>
             
             <label for="updateFoto" style={{display:!toggle ? "block" : "none"}}>
                 <img src={Logo} alt="Logo tipo" />
@@ -167,7 +167,7 @@ export const Menu = () => {
                                     onClick={() => setClassAtiva("Posada/Hotel")}
                                     className={classAtiva === "Posada/Hotel" ? styles.icone_Ativo : styles.icone}
                                 />
-                                Posada/Hotel
+                                Posada | Hotel
                             </Link>
                          ) : (
                             <></>
