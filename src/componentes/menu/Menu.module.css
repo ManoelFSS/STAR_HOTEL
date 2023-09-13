@@ -5,7 +5,7 @@
     display: flex;
     flex-direction: column;
     align-items:center;
-    background-color:var( --cor--fundo--);
+    background-color:var( --cor--fundo--naveBar--);
     overflow: hidden;
     transition: all 0.2s;
     position: relative;
@@ -24,6 +24,7 @@
     width: 100%;
     justify-content: center;
     padding: 5px;
+    cursor: pointer;
 }
 
 .nave_Ber label::after {
@@ -31,8 +32,8 @@
     display: none;
     width: 50px;
     position: absolute;
-    background-color: rgba(238, 238, 238, 0.551);
-    color: var(--cor--black_hover--);
+    background-color: var( --cor--sinza--text--icone--);
+    color: var(--cor--white_hover--);
     padding: 5px;
     top: 10px;
     right: 10px;
@@ -43,6 +44,7 @@
 .nave_Ber label:hover::after{
     display: block;
     font-weight: bolder;
+    font-size: 14px;
     border:solid 1px var(--cor--border--)
 }
 

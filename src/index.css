@@ -7,18 +7,21 @@
   --cor--yellow_hover--:#ec972f;
   --cor--fundo--:rgb(54, 54, 54);
   --cor--border--:rgb(141, 141, 141);
+  --cor--fundo--naveBar--:rgb(21, 21, 21);
+  --cor--after--:rgba(0, 0, 0, 0.5);
 
 }
 
 .newCores {
-  --cor--sinza--text--icone--:rgb(109, 161, 194);
+  --cor--sinza--text--icone--:rgb(255, 255, 255);
   --cor--white_hover--:rgb(204, 105, 0);
   --cor--black_backgrou--icone--:rgb(20, 20, 20);
   --cor--black_hover--:rgb(0, 0, 0);
   --cor--black_shadow--:rgb(0, 0, 0);
-  --cor--yellow_hover--:#ec972f;
-  --cor--fundo--:rgb(236, 236, 236);
+  --cor--yellow_hover--:#f0ae5d;
+  --cor--fundo--:rgb(165, 194, 211);
   --cor--border--:rgb(0, 0, 0);
+  --cor--fundo--naveBar--:rgb(80, 111, 131);
 }
 
 
