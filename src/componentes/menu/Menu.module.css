@@ -5,11 +5,11 @@
     display: flex;
     flex-direction: column;
     align-items:center;
-    background-color:rgba(0, 0, 0, 0.424);
+    background-color:var( --cor--fundo--);
     overflow: hidden;
     transition: all 0.2s;
     position: relative;
-    box-shadow: 4px 4px 15px  #000;
+    box-shadow: 4px 10px 10px  #000;
 }
 
 .nave_Ber label{
@@ -31,8 +31,8 @@
     display: none;
     width: 50px;
     position: absolute;
-    background-color: rgba(112, 111, 111, 0.551);
-    color: #fff;
+    background-color: rgba(238, 238, 238, 0.551);
+    color: var(--cor--black_hover--);
     padding: 5px;
     top: 10px;
     right: 10px;
@@ -42,6 +42,8 @@
 
 .nave_Ber label:hover::after{
     display: block;
+    font-weight: bolder;
+    border:solid 1px var(--cor--border--)
 }
 
 .nave_Ber img {
@@ -49,12 +51,9 @@
     width: 120px;
     background-color:rgba(0, 0, 0, 0);
     border-radius:50%;
-    border: solid 2px  rgb(141, 141, 141);
+    border: solid 2px  var(--cor--white_hover--);
     cursor: pointer;
     position: relative;
-}
-.nave_Ber img:hover {
-    border: solid 2px  rgb(255, 255, 255);
 }
 
 .nave_Ber ul {
@@ -67,15 +66,17 @@
 .nave_Ber ul li{
     width: 200px;
     padding: 2px 10px;
+    
 }
 
 .link {
     display: flex;
     align-items:center;
     gap: 20px;
-    color: rgb(141, 141, 141);
+    color: var( --cor--sinza--text--icone--);
     text-decoration: none;
     transition: all 0.3s;
+    font-weight: bolder;
 }
 .link_Ativo {
     display: flex;
@@ -83,6 +84,7 @@
     gap: 20px;
     text-decoration: none;
     transition: all 0.3s;
+    font-weight: bolder;
 }
 
 .icone {
@@ -93,7 +95,7 @@
 }
 
 .nave_Ber ul li:hover .link, .link_Ativo {
-    color: #fff;
+    color: var( --cor--white_hover--);
 }
 
 .nave_Ber ul li:hover .icone, .icone_Ativo {

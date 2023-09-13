@@ -1,15 +1,13 @@
-import React, { useState, useEffect } from "react";
-
+import React, { useState } from "react";
 import styles from "./Menu.module.css"
 import { Link } from "react-router-dom"
+
 import { IoHome } from 'react-icons/io5';
 import { BsFillPersonVcardFill } from 'react-icons/bs';
-import { AiFillCar } from 'react-icons/ai';
+import { AiFillCar, AiFillDatabase } from 'react-icons/ai';
 import { MdBed } from 'react-icons/md';
-import { AiFillDatabase } from 'react-icons/ai';
 import { CgSmartHomeRefrigerator } from 'react-icons/cg';
-import { FaCalendarDays } from 'react-icons/fa6';
-import { FaMoneyBillTrendUp } from 'react-icons/fa6';
+import { FaCalendarDays, FaMoneyBillTrendUp } from 'react-icons/fa6';
 import { GiReceiveMoney } from 'react-icons/gi';
 import { RiHotelFill } from 'react-icons/ri';
 import { IoSettingsSharp } from 'react-icons/io5';
@@ -22,44 +20,12 @@ export const Menu = () => {
     const { toggle, levelRestrito } = useAppContext();
     const [classAtiva, setClassAtiva] = useState("Home")
     const [classLink, setClassLink] = useState("Home")
-    const [foto, setFoto] = useState()
-
-
-    useEffect(()=>{
-        const dataFoto = localStorage.getItem("foto");
-        if(dataFoto === null){
-           localStorage.setItem("foto", Logo)
-        }
-        update()
-    },[])
-
-
-    const update = () =>{
-        const getFoto = localStorage.getItem("foto");
-        setFoto(getFoto )
-    } 
-
-    const hendeleUpdateFoto = (e)=>{
-
-        const inputTarget = e.target
-        console.log(inputTarget)
-        const file = inputTarget.files[0]
-        // Verifique se um arquivo foi selecionado
-        if (file) {
-            console.log(file)
-            // Crie uma URL temporária para a imagem selecionada
-            const imageUrl = URL.createObjectURL(file);
-            console.log(imageUrl)
-            localStorage.setItem("foto", imageUrl)
-            update()
-        }
-    }
-
+   
     return (
         <nav className={styles.nave_Ber} style={{width: toggle ? "60px" : "200px"}}>
             
             <label for="updateFoto" style={{display:!toggle ? "block" : "none"}}>
-                <img src={foto} alt="Logo tipo" />
+                <img src={Logo} alt="Logo tipo" />
                 <h4>Manoel</h4>
             </label>
             <input 
