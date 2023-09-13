@@ -97,6 +97,7 @@
 }
 
 .nave_Ber ul li:hover .link, .link_Ativo {
+    font-weight: bolder;
     color: var( --cor--white_hover--);
 }
 
