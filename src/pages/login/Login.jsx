@@ -44,8 +44,9 @@ export const Login = () =>{
                 </h1>
                 <form className={styles.form_login}>
                     <div>
-                        <label htmlFor="">Usuário</label>
+                        <label htmlFor="Usuário">Usuário</label>
                         <input 
+                            id="Usuário"
                             type="text" 
                             placeholder="Digite seu Usuário" 
                             autoComplete="off"
@@ -54,8 +55,9 @@ export const Login = () =>{
                             />
                     </div>
                     <div>
-                        <label htmlFor="">Senha</label>
+                        <label htmlFor="password">Senha</label>
                         <input 
+                            id="password"
                             type="password" 
                             placeholder="Digite sua Senha" 
                             autoComplete="off"

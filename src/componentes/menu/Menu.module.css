@@ -14,8 +14,8 @@
 }
 
 .nave_Ber label{
-    height: 120px;
-    width: 120px;
+    height: 100px;
+    width: 100px;
     margin-top: 10px;
     border-radius:50%;
 }
@@ -50,8 +50,8 @@
 }
 
 .nave_Ber img {
-    height: 120px;
-    width: 120px;
+    height: 100px;
+    width: 100px;
     background-color:rgba(0, 0, 0, 0);
     border-radius:50%;
     border: solid 2px  var(--cor--white_hover--);
@@ -62,8 +62,9 @@
 .nave_Ber ul {
     list-style: none;
     width: 100%;
-    margin-top: 160px;
+    margin-top: 140px;
     position: absolute;
+    padding-bottom: 10px ;
 }
 
 .nave_Ber ul li{
