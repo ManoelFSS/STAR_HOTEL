@@ -38,7 +38,7 @@ export const Login = () =>{
 
     return (
         <section className={styles.area_login}  >
-            <div>
+            <div className={styles.container}>
                 <h1>
                     STAR HOTEL
                 </h1>

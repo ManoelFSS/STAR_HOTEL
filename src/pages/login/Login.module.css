@@ -1,6 +1,6 @@
 .area_login {
     width: 100%;
-    min-height: 100vh;
+    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -9,10 +9,11 @@
     background: url(https://images.wallpaperscraft.com/image/single/burj_al_arab_hotel_dubai_uae_59061_3840x2160.jpg) no-repeat center / cover;
 }
 
+.container {
+    margin-top: -20px;
+}
+
 .area_login h1{
-   display: flex;
-   align-items:center;
-   justify-content: center;
    width: 300px;
    font-size: 25px;
    font-weight: 800;
@@ -20,6 +21,7 @@
    text-shadow: 1px 2px 4px #000000;
    letter-spacing: 10px;
    margin-bottom: 10px;
+   text-align: center;
 }
 
 .form_login {
