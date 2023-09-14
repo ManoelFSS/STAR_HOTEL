@@ -22,7 +22,7 @@ export const Menu = () => {
     const [classLink, setClassLink] = useState("Home")
    
     return (
-        <nav className={styles.nave_Ber} style={{width: toggle ? "60px" : "220px"}}>
+        <nav className={styles.nave_Ber} style={{width: toggle ? "60px" : "270px"}}>
             
             <label for="updateFoto" style={{display:!toggle ? "block" : "none"}}>
                 <img src={Logo} alt="Logo tipo" />
