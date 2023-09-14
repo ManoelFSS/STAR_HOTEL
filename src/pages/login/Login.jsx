@@ -38,36 +38,38 @@ export const Login = () =>{
 
     return (
         <section className={styles.area_login}  >
-            <h1>
-                STAR HOTEL
-            </h1>
-            <form className={styles.form_login}>
-                <div>
-                    <label htmlFor="">Usuário</label>
-                    <input 
-                        type="text" 
-                        placeholder="Digite seu Usuário" 
-                        autoComplete="off"
-                        value={usuario}
-                        onChange={(e)=> setUsuario(e.target.value)}
-                        />
-                </div>
-                <div>
-                    <label htmlFor="">Senha</label>
-                    <input 
-                        type="password" 
-                        placeholder="Digite sua Senha" 
-                        autoComplete="off"
-                        value={senha}
-                        onChange={(e)=> setSenha(e.target.value)}
-                        />
-                </div>
-                <div>
-                    <button onClick={(e)=> {hendele_login(); }}>
-                        Entrar
-                    </button>
-                </div>
-            </form>
+            <div>
+                <h1>
+                    STAR HOTEL
+                </h1>
+                <form className={styles.form_login}>
+                    <div>
+                        <label htmlFor="">Usuário</label>
+                        <input 
+                            type="text" 
+                            placeholder="Digite seu Usuário" 
+                            autoComplete="off"
+                            value={usuario}
+                            onChange={(e)=> setUsuario(e.target.value)}
+                            />
+                    </div>
+                    <div>
+                        <label htmlFor="">Senha</label>
+                        <input 
+                            type="password" 
+                            placeholder="Digite sua Senha" 
+                            autoComplete="off"
+                            value={senha}
+                            onChange={(e)=> setSenha(e.target.value)}
+                            />
+                    </div>
+                    <div>
+                        <button onClick={(e)=> {hendele_login(); }}>
+                            Entrar
+                        </button>
+                    </div>
+                </form>
+            </div>
         </section>
     )
 }
