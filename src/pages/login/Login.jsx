@@ -8,8 +8,6 @@ export const Login = () =>{
     const [usuario, setUsuario] = useState("admin")
     const [senha, setSenha] = useState("admin")
     const {db_Usuarios, setAdm, setLevelRestrito} = useAppContext();
-
-    console.log(db_Usuarios)
    
     const hendele_login = () => {
 
@@ -23,26 +21,25 @@ export const Login = () =>{
                 setLevelRestrito(false);
                 console.log("admin");
                 encontrouUsuario = true; // Defina como verdadeiro se uma condição for satisfeita
-                break; // Saia do loop, pois já encontramos uma correspondência
+              
             } else if (db_Usuarios[i].usuario === usuario.toLowerCase() && db_Usuarios[i].password === senha.toLowerCase() && db_Usuarios[i].level === "funcionario") {
                 setAdm(true);
                 setLevelRestrito(true);
                 console.log("funcionario");
                 encontrouUsuario = true; // Defina como verdadeiro se uma condição for satisfeita
-                break; // Saia do loop, pois já encontramos uma correspondência
+              
             }
             }
         
             if (!encontrouUsuario) {
-                alert("Nenhum usuário correspondente encontrado"); // Exibe o alerta se nenhum dos if for satisfeito
+                alert("Ops! Usuario ou Senha invalido \n Por favor tente novamente ou entre em contato com Administrador")
             }
     }
 
     return (
         <section className={styles.area_login}  >
-            {/* <img src={Logo} alt="STAR HOTEL SISTEM" /> */}
             <h1>
-                STAR HOTEL 
+                STAR HOTEL
             </h1>
             <form className={styles.form_login}>
                 <div>

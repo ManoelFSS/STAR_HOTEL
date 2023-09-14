@@ -34,13 +34,14 @@ export const Menu = () => {
     }
 
     window.addEventListener('resize',hendeleTggle);
-
+    
+   
     
    
 
    
     return (
-        <nav className={styles.nave_Ber} style={{width: toggle ? "60px" : "270px"}}>
+        <nav className={styles.nave_Ber} style={{width: toggle ? "60px" : "240px"}}>
             
             <label for="updateFoto" style={{display:!toggle ? "block" : "none"}}>
                 <img src={Logo} alt="Logo tipo" />

@@ -32,7 +32,7 @@ export const AppProvider = ({ children }) => { // exportando a funçao de que fa
     };
 
     return ( // usando e retornando o Appcontext.provider e passando o children, passando valores como props  pelo value 
-      <AppContext.Provider value={{ toggle, toggleMenu, db_Usuarios, adm, setAdm, setLevelRestrito, levelRestrito,  setToggle }}>
+      <AppContext.Provider value={{ toggle, toggleMenu, db_Usuarios, adm, setAdm, setLevelRestrito, levelRestrito, setToggle }}>
         {children}
       </AppContext.Provider>
     );

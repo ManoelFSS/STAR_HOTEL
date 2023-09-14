@@ -65,12 +65,7 @@ header p:hover {
     cursor: pointer;
 }
 
-.area_close_dark span:hover {
-    background-color:var(--cor--black_hover--);
-    animation: animaIcone  1s alternate-reverse infinite;
-}
-
-.toggle_white:hover {
+.toggle_white {
     transition: all 0.3s;
     animation: animaIcone  1s alternate-reverse infinite;
 }
@@ -78,6 +73,7 @@ header p:hover {
 @keyframes animaIcone {
     0%{
         color:var(--cor--white_hover--);
+        transform: rotatey(180deg);
     }
     100%{
         color:var(--cor--yellow_hover--);
