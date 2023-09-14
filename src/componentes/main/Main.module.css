@@ -1,6 +1,6 @@
 
 .container {
     display: flex;
-    height: calc(100vh - 56px);
+    min-height: calc(100vh - 56px);
     padding-bottom: 10px;
 }
