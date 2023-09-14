@@ -17,9 +17,27 @@ import { useAppContext } from "../../AppContext";
 
 export const Menu = () => {
 
-    const { toggle, levelRestrito } = useAppContext();
+    const { toggle, levelRestrito, setToggle } = useAppContext();
     const [classAtiva, setClassAtiva] = useState("Home")
     const [classLink, setClassLink] = useState("Home")
+
+    const hendeleTggle = () => {
+
+        const larguraTela = window.innerWidth
+
+        if(larguraTela < 550){
+            setToggle(true)
+        }else{
+            setToggle(false)
+        }
+
+    }
+
+    window.addEventListener('resize',hendeleTggle);
+
+    
+   
+
    
     return (
         <nav className={styles.nave_Ber} style={{width: toggle ? "60px" : "270px"}}>
