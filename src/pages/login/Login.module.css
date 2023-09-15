@@ -10,6 +10,11 @@
     margin-top: -20px;
 }
 
+.area_login .container div {
+    position: relative;
+}
+
+
 .area_login h1{
    width: 300px;
    font-size: 24px;
@@ -43,6 +48,7 @@
     font-size: 17px;
     text-shadow: 1px 2px 4px #000000;
     letter-spacing: 2px;
+    cursor: pointer;
 }
 .form_login input {
     height: 40px;
@@ -51,9 +57,10 @@
     background-color:rgba(34, 33, 33, 0.139);
     box-shadow:inset  2px 2px 8px #000;
     border: none;
-    color: #000000;
+    color: #ffffff;
     font-size: 16px;
-    font-weight: 800;
+    font-weight: 500;
+    font-family: sans-serif;
 }
 .form_login input::placeholder {
     color: #c6c6c6;
@@ -83,4 +90,13 @@
     .area_login {
         background: url(https://images.wallpaperscraft.com/image/single/burj_al_arab_hotel_dubai_uae_59061_3840x2160.jpg) no-repeat  -400px center / 250% 100%;
     }
+}
+
+
+.area_icone_password {
+    display: inline-block;
+    position: absolute;
+    margin-top: 12px;
+    margin-left: -25px;
+    font-size: 20px;
 }

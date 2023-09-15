@@ -1,6 +1,7 @@
 import React, { useState } from "react"
 import styles from "./Login.module.css"
 import { useAppContext } from '../../AppContext';
+import { AiFillEyeInvisible, AiFillEye } from 'react-icons/ai';
 
 
 export const Login = () =>{
@@ -8,6 +9,7 @@ export const Login = () =>{
     const [usuario, setUsuario] = useState("admin")
     const [senha, setSenha] = useState("admin")
     const {db_Usuarios, setAdm, setLevelRestrito} = useAppContext();
+    const [typePassword, settypePassword] = useState("password")
    
     const hendele_login = () => {
 
@@ -58,15 +60,31 @@ export const Login = () =>{
                         <label htmlFor="password">Senha</label>
                         <input 
                             id="password"
-                            type="password" 
+                            type={typePassword}
                             placeholder="Digite sua Senha" 
                             autoComplete="off"
                             value={senha}
                             onChange={(e)=> setSenha(e.target.value)}
-                            />
+                        />
+                        <section  
+                            onClick={()=> settypePassword(typePassword === "password" ? "text" : "password")}
+                            className={styles.area_icone_password}
+                        >
+                            {
+                                typePassword === "password" ? (
+                                    <AiFillEyeInvisible 
+                                        style={{cursor:"pointer"}} 
+                                    />
+                                ) : (
+                                    <AiFillEye
+                                        style={{cursor:"pointer"}}
+                                    />
+                                )
+                            }    
+                        </section>
                     </div>
                     <div>
-                        <button onClick={(e)=> {hendele_login(); }}>
+                        <button onClick={()=> {hendele_login(); }}>
                             Entrar
                         </button>
                     </div>
